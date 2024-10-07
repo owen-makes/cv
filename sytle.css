@@ -1,0 +1,111 @@
+  /*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+/*  end reset */
+:root {
+  --highlight: #FF8A00;
+  --bg-color: #FAFAFA;
+  --light-text: #404040;
+}
+
+p, a {
+  color: var(--light-text);
+}
+
+body {
+  --dot-bg: var(--bg-color);
+  --dot-color: #e4e4e4;
+  --dot-size: 2px;
+  --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+  font-family: "Share Tech Mono", monospace;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+
+}
+
+.share-tech-mono-regular {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cv-column {
+  height: 100vh;
+  /* background-color: rgba(200, 200, 200, 0.8); */
+  padding: max(1vh, 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--highlight);
+  text-transform: uppercase;
+  font-size: 96px;
+}
+
+h3 {
+  color: var(--highlight);
+}
+
+.divider {
+  fill: var(--highlight);
+}
+
+.contact-info, .profile > div {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  padding-bottom: 4px;
+  color: #FF8A00;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    font-size: 5rem;
+  }
+
+}
