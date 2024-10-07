@@ -73,6 +73,10 @@ h1 {
   font-size: 96px;
 }
 
+header {
+  margin-bottom: 1vh;
+}
+
 h3 {
   color: var(--highlight);
 }
