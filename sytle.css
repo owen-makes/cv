@@ -60,8 +60,8 @@ body {
 }
 
 .cv-column {
-  height: 100vh;
-  padding: max(1vh, 1rem);
+  padding: clamp(3px, 1rem, 2vh);
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
 }
