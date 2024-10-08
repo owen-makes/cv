@@ -61,7 +61,6 @@ body {
 
 .cv-column {
   height: 100vh;
-  /* background-color: rgba(200, 200, 200, 0.8); */
   padding: max(1vh, 1rem);
   display: flex;
   flex-direction: column;
@@ -69,8 +68,9 @@ body {
 
 h1 {
   color: var(--highlight);
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 96px;
+  font-weight: lighter;
 }
 
 header {
@@ -106,10 +106,28 @@ a:hover {
 @media screen and (max-width: 500px) {
   h1 {
     display: none;
+    text-transform: uppercase;
+
   }
   .mobile {
     display: block;
     font-size: 5rem;
   }
 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --highlight: #6bc9bc;
+    --bg-color: #041622;
+    --light-text: #b8bfca;
+  }
+
+  body {
+    --dot-color: rgb(61, 90, 117);
+  }
+
+  b {
+    color: #fffffF;
+  }
 }
