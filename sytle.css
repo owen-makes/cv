@@ -79,6 +79,11 @@ header {
 
 h3 {
   color: var(--highlight);
+  transition: 100ms scale ease-in-out;
+}
+
+h3:hover {
+  scale: 1.02;
 }
 
 .divider {
@@ -92,11 +97,12 @@ h3 {
 
 a {
   text-decoration: none;
+  transition-duration: 150ms;
 }
 
 a:hover {
-  padding-bottom: 4px;
-  color: #FF8A00;
+  scale: 1.1;
+  color: var(--highlight);
 }
 
 .mobile {
